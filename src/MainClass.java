@@ -9,7 +9,7 @@ public class MainClass {
 
     public static void main(String[] args) {
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Подготовка!!!");
-        CyclicBarrier cyclicBarrier=new CyclicBarrier(5);
+        CyclicBarrier cyclicBarrier=new CyclicBarrier(CARS_COUNT+1);
         CountDownLatch countDownLatch = new CountDownLatch(CARS_COUNT);
         Race race = new Race(new Road(60), new Tunnel(), new Road(40));
         Car[] cars = new Car[CARS_COUNT];
